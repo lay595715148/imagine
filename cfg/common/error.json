@@ -1,0 +1,14 @@
+{
+    "errors":{
+        "100000":"interal error",
+        "100001":"invalid json",
+        "100002":"invalid cmd",
+        "100003":"unsupported cmd",
+        "100004":"no output",
+        
+        "101000":"invalid_request",
+        "101001":"invalid_client",
+        "101002":"120_120",
+        "101003":"60_60"
+    }
+}

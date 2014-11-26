@@ -1,0 +1,83 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='shortcut icon', href='/image/favicon.ico')
+    link(type='text/css', href='/jquery/jquery-ui-1.10.3.custom/css/flick/jquery-ui.css', media='all', rel='stylesheet')
+    link(type='text/css', href='/webix/webix.css', rel='stylesheet')
+    link(type='text/css', href='/css/base.css', rel='stylesheet')
+    link(type='text/css', href='/jquery/pnotify-1.2.0/devnote.css', rel='stylesheet')
+    link(type='text/css', href='/jquery/pnotify-1.2.0/oxygen/icons.css', rel='stylesheet')
+    link(type='text/css', href='/jquery/pnotify-1.2.0/jquery.pnotify.default.css', rel='stylesheet')
+    link(type='text/css', href='/jquery/pnotify-1.2.0/jquery.pnotify.default.icons.css', rel='stylesheet')
+    link(type='text/css', href='/css/main.css',  rel='stylesheet')
+    //
+      [if lt IE 9]>
+      script(type='text/javascript', src='/library/html5shiv.js')
+      <![endif]
+    script(type='text/javascript', src='/library/underscore/underscore.js')
+    //script(type='text/javascript', src='/socket.io/socket.io.js')
+    script(type='text/javascript', src='/jquery/jquery-1.10.2.js')
+    script(type='text/javascript', src='/jquery/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js')
+    script(type='text/javascript', src='/jquery/jquery.cookie.js')
+    script(type='text/javascript', src='/jquery/pnotify-1.2.0/jquery.pnotify.js')
+    script(type='text/javascript', src='/webix/webix_debug.js')
+    script(type='text/javascript', src='/js/core.js')
+  body
+    header(class='header')
+      .header-inner
+        h1.header-logo
+          a(href='/login', target='_blank')
+            img(src='/image/favicon.ico')
+        nav.header-nav
+          a(href='/login', target='_blank')= res.PERSON_CENTER
+          a(href='/login', target='_blank')= res.OTHER
+          a(href='/login', target='_blank')= res.HELP_INFO
+    section(class='main')
+      .main-inner
+        .login-box
+          .login-header
+            .login-normal 普通登录
+            .login-other 第三方登录
+          .login-form
+            form(action='', method='post')
+              if user
+                .login-line-info
+                  span.login-form-span.info(name='info')= res.LOGINED_TITLE
+                .login-line-info
+                  span.login-form-span.name(name='username')= res.USERNAME + '：' + user.name
+              else 
+                .login-line-input
+                  b.ico.ico-uid
+                  input.login-form-input(name='username')
+                  label.login-placeholder.login-placeholder-show= res.USERNAME
+                .login-line-input
+                  b.ico.ico-pwd
+                  input.login-form-input(name='password', type='password')
+                  label.login-placeholder.login-placeholder-show= res.PASSWORD
+              .login-line-check
+                if error
+                  span.failure= error
+                if user
+                  input#otherlogin(type='hidden' name='otherlogin' value='')
+                else
+                  input#register(type='hidden' name='register' value='')
+              .login-line-btn
+                if user
+                  button.btn.login-button(type='submit', onclick='javascript:$("#otherlogin").val("");')= res.BTN_AUTH_LOGIN
+                  button.btn.login-button.login-button-other(type='submit', onclick='javascript:$("#otherlogin").val("1");')= res.BTN_OTHER_LOGIN
+                else
+                  button.btn.login-button(type='submit', onclick='javascript:$("#register").val("");')= res.BTN_LOGIN
+                  button.btn.login-button.login-button-reg(type='submit', onclick='javascript:$("#register").val("1");')= res.BTN_REGESTER
+              .login-line-cfg
+    footer(class='footer')
+      .footer-inner
+        nav.footer-nav
+          a(href='/login', target='_blank')= res.ABOUT_US
+          a.last(href='/login', target='_blank')= res.PRIVACY
+          span |
+          span.copyright 公司版权所有©1997-2014
+          span |
+          a(href='/login', target='_blank') ICPB2-20090191
+    iframe.login-frame(src='about:blank', name='hidden-frame') 登录iframe
+    script(type='text/javascript', src='/js/login.js')
