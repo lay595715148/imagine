@@ -4,9 +4,9 @@ var $ = global.$ = global.$ || require('./lib/util/Require');
 var _ = global._ = global._ || {};//备用
 
 //初始化定义模块或类访问空间
-$.define($, ['async', 'body-parser', 'cookie-parser', 'cookie-session',
+$.define($, ['assert', 'async', 'body-parser', 'cookie-parser', 'cookie-session',
         'express', 'helmet', 'http', 'memcache', 'method-override', 'moment', 'mongodb',
-        'mysql', 'redis', 'underscore', 'url', 'util']);
+        'mysql', 'node-uuid', 'redis', 'underscore', 'url', 'util']);
 $.define($, [__dirname + '/lib']);
 
 var cfg = $.core.Config;
