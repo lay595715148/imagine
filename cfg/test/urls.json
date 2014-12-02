@@ -1,0 +1,8 @@
+{
+    urls: {
+        oauth2: {
+            authorize:"/oauth2/authorize"
+        },
+        register:"/register"
+    }
+}

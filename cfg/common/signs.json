@@ -1,0 +1,23 @@
+{
+    sign: {
+        memcache: {
+            session: "session",
+            token: "token",
+            user: "user",
+            oauth2: {
+                
+            }
+        },
+        cookie: {
+            session: "sessid"
+        },
+        query: {
+            oauth2: {
+                code: "code",
+                token: "token"
+            }
+        },
+        action: {
+        }
+    }
+}

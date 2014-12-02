@@ -17,7 +17,8 @@
             BTN_OTHER_LOGIN:"其他帐号登录",
             HELP_INFO:"帮助信息",
             ABOUT_US:"关于我们",
-            PRIVACY:"隐私政策"
+            PRIVACY:"隐私政策",
+            COPYRIGHT:"公司版权所有©2007-2014"
         }
     }
 }

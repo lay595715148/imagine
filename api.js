@@ -6,10 +6,10 @@ function api(req, res, callback) {
     var _json = req._json = _request.json ? $.Util.toJson(_request.json) : {};
     var _cmd = req._cmd = _json.cmd || '';
     if(!_json || $.Util.isEmpty(_json)) {
-        res.json({isok:false, code:100001, data:$.get('errors.' + 100001)});
+        res.json({isok:false, code:$.error.INVALID_JSON.code, data:$.error.INVALID_JSON.message});
         callback && callback();
     } else if(!_cmd) {
-        res.json({isok:false, code:100002, data:$.get('errors.' + 100002)});
+        res.json({isok:false, code:$.error.INVALID_CMD.code, data:$.error.INVALID_CMD.message});
         callback && callback();
     } else {
         $.core.Dispatcher.run(_cmd, $.json, req, res, callback);

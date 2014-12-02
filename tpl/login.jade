@@ -16,6 +16,7 @@ html
       script(type='text/javascript', src='/library/html5shiv.js')
       <![endif]
     script(type='text/javascript', src='/library/underscore/underscore.js')
+    script(type='text/javascript', src='/library/moment/moment.js')
     //script(type='text/javascript', src='/socket.io/socket.io.js')
     script(type='text/javascript', src='/jquery/jquery-1.10.2.js')
     script(type='text/javascript', src='/jquery/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js')
@@ -76,7 +77,7 @@ html
           a(href='/login', target='_blank')= res.ABOUT_US
           a.last(href='/login', target='_blank')= res.PRIVACY
           span |
-          span.copyright 公司版权所有©1997-2014
+          span.copyright= res.COPYRIGHT
           span |
           a(href='/login', target='_blank') ICPB2-20090191
     iframe.login-frame(src='about:blank', name='hidden-frame') 登录iframe

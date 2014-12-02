@@ -1,14 +1,40 @@
 {
     "errors":{
-        "100000":"interal error",
-        "100001":"invalid json",
-        "100002":"invalid cmd",
-        "100003":"unsupported cmd",
-        "100004":"no output",
+        "100000":"interal_error",
+        "100001":"invalid_json",
+        "100002":"invalid_cmd",
+        "100003":"unsupported_cmd",
+        "100004":"no_output",
         
         "101000":"invalid_request",
         "101001":"invalid_client",
-        "101002":"120_120",
-        "101003":"60_60"
+        "101002":"invalid_grant",
+        "101003":"invalid_token",
+        "101004":"invalid_grant",
+        "101005":"invalid_grant"
+    },
+    "error-codes": {
+        INTERAL_ERROR:100000,
+        INVALID_JSON:100001,
+        INVALID_CMD:100002,
+        UNSUPPORTED_CMD:100003,
+        NO_OUTPUT:100004,
+        
+        INVALID_REQUEST:101000,
+        INVALID_CLIENT:101001,
+        INVALID_GRANT:101002,
+        INVALID_TOKEN:101003
+    },
+    "error-messages": {
+        INTERAL_ERROR:"interal_error",
+        INVALID_JSON:"invalid_json",
+        INVALID_CMD:"invalid_cmd",
+        UNSUPPORTED_CMD:"unsupported_cmd",
+        NO_OUTPUT:"no_output",
+        
+        INVALID_REQUEST:"invalid_request",
+        INVALID_CLIENT:"invalid_client",
+        INVALID_GRANT:"invalid_grant",
+        INVALID_TOKEN:"invalid_token"
     }
 }
