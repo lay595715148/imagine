@@ -10,7 +10,7 @@ $.define($, ['assert', 'async', 'body-parser', 'cookie-parser', 'cookie-session'
 $.define($, [__dirname + '/lib']);
 
 var cfg = $.core.Config;
-var err = $.core.Error;
+var err = $.core.Exception;
 var app = $.express();
 //create server
 var server = $.http.createServer(app).listen(port);
