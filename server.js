@@ -6,11 +6,11 @@ var _ = global._ = global._ || {};//备用
 //初始化定义模块或类访问空间
 $.define($, ['assert', 'async', 'body-parser', 'cookie-parser', 'cookie-session',
         'express', 'helmet', 'http', 'memcache', 'method-override', 'moment', 'mongodb',
-        'mysql', 'node-uuid', 'redis', 'underscore', 'url', 'util']);
+        'mysql', 'node-uuid', 'redis', 'request', 'underscore', 'url', 'util']);
 $.define($, [__dirname + '/lib']);
 
 var cfg = $.core.Config;
-var err = $.core.Error;
+var err = $.core.Exception;
 var app = $.express();
 //create server
 var server = $.http.createServer(app).listen(port);
@@ -33,17 +33,17 @@ app.use(function(req, res, next) {
     var _path = $.url.parse(req.url,true).pathname.substr(1);
     if(_path === 'test') {
         $.Log.info('------------ TEST ------------');
-        require('./test')(req, res, api_url, function() {
+        $.App.test(req, res, api_url, function() {
             $.Log.info('------------ TEST*------------');
         });
     } else if(_path === ''){
         $.Log.info('------------ API  ------------');
-        require('./api')(req, res, function() {
+        $.App.api(req, res, function() {
             $.Log.info('------------ API* ------------');
         });
     } else {
         $.Log.info('------------ WEB  ------------');
-        require('./index')(req, res, function() {
+        $.App.web(req, res, function() {
             $.Log.info('------------ WEB* ------------');
         });
     }
