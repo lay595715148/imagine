@@ -5,8 +5,8 @@ var _ = global._ = global._ || {};//备用
 
 //初始化定义模块或类访问空间
 $.define($, ['assert', 'async', 'body-parser', 'cookie-parser', 'cookie-session',
-        'express', 'helmet', 'http', 'memcache', 'method-override', 'moment', 'mongodb',
-        'mysql', 'node-uuid', 'redis', 'request', 'underscore', 'url', 'util']);
+        'express', 'helmet', 'jade', 'http', 'memcache', 'method-override', 'moment', 'mongodb',
+        'mysql', 'node-uuid', 'path', 'redis', 'request', 'underscore', 'url', 'util']);
 $.define($, [__dirname + '/lib']);
 
 var cfg = $.core.Config;
