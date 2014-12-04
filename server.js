@@ -4,7 +4,7 @@ var $ = global.$ = global.$ || require('./lib/util/Require');
 var _ = global._ = global._ || {};//备用
 
 //初始化定义模块或类访问空间
-$.define($, ['assert', 'async', 'body-parser', 'cookie-parser', 'cookie-session',
+$.define($, ['assert', 'async', 'body-parser', 'cookie-parser', 'cookie-session', 'crypto',
         'express', 'helmet', 'jade', 'http', 'memcache', 'method-override', 'moment', 'mongodb',
         'mysql', 'node-uuid', 'path', 'redis', 'request', 'underscore', 'url', 'util']);
 $.define($, [__dirname + '/lib']);
@@ -28,8 +28,9 @@ app.use($.body_parser.json());
 app.use($.body_parser.urlencoded());
 app.use($.cookie_parser());
 app.use($.method_override());
-app.use($.cookie_session({ secret:'imagine-test',cookie: { maxAge: 60 * 60 * 1000 }}));
+app.use($.cookie_session({ secret:'imagine-test', cookie: { maxAge: 60 * 60 * 1000 }}));
 app.use(function(req, res, next) {
+    //console.log(req.constructor);console.log(res.constructor);console.log(next.constructor);
     var _path = $.url.parse(req.url,true).pathname.substr(1);
     if(_path === 'test') {
         $.Log.info('------------ TEST ------------');
