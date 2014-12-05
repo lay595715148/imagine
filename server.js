@@ -30,7 +30,6 @@ app.use($.cookie_parser());
 app.use($.method_override());
 app.use($.cookie_session({ secret:'imagine-test', cookie: { maxAge: 60 * 60 * 1000 }}));
 app.use(function(req, res, next) {
-    //console.log(req.constructor);console.log(res.constructor);console.log(next.constructor);
     var _path = $.url.parse(req.url,true).pathname.substr(1);
     if(_path === 'test') {
         $.Log.info('------------ TEST ------------');
