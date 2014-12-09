@@ -1,4 +1,4 @@
-var port = 8809, port_api = 8808;
+var port = 8133, port_api = 8808;
 var api_url = 'http://localhost:' + port_api + '/';
 var $ = global.$ = global.$ || require('./lib/util/Require');
 var _ = global._ = global._ || {};//备用
@@ -28,7 +28,7 @@ app.use($.body_parser.json());
 app.use($.body_parser.urlencoded());
 app.use($.cookie_parser());
 app.use($.method_override());
-app.use($.cookie_session({ secret:'imagine-test',cookie: { maxAge: 60 * 60 * 1000 }}));
+app.use($.cookie_session({ secret:'imagine-test', cookie: { maxAge: 60 * 60 * 1000 }}));
 app.use(function(req, res, next) {
     var _path = $.url.parse(req.url,true).pathname.substr(1);
     if(_path === 'test') {
@@ -38,12 +38,12 @@ app.use(function(req, res, next) {
         });
     } else if(_path === ''){
         $.Log.info('------------ API  ------------');
-        $.App.api(req, res, function() {
+        $.App.json(req, res, function() {
             $.Log.info('------------ API* ------------');
         });
     } else {
         $.Log.info('------------ WEB  ------------');
-        $.App.web(req, res, function() {
+        $.App.api(req, res, function() {
             $.Log.info('------------ WEB* ------------');
         });
     }

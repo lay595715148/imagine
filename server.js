@@ -1,4 +1,4 @@
-var port = 8808, port_api = 8809;
+var port = 8808, port_api = 8133;
 var api_url = 'http://localhost:' + port_api + '/';
 var $ = global.$ = global.$ || require('./lib/util/Require');
 var _ = global._ = global._ || {};//备用
@@ -38,12 +38,12 @@ app.use(function(req, res, next) {
         });
     } else if(_path === ''){
         $.Log.info('------------ API  ------------');
-        $.App.api(req, res, function() {
+        $.App.json(req, res, function() {
             $.Log.info('------------ API* ------------');
         });
     } else {
         $.Log.info('------------ WEB  ------------');
-        $.App.web(req, res, function() {
+        $.App.api(req, res, function() {
             $.Log.info('------------ WEB* ------------');
         });
     }

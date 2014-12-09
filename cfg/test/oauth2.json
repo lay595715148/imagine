@@ -1,6 +1,6 @@
 {
     oauth2: {
-        code_lifetime: 12400,
+        code_lifetime: 1800,
         access_token_lifetime: 12400,
         refresh_token_lifetime: 86400,
         use_refresh_token: false
