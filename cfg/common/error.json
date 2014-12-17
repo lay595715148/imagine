@@ -12,7 +12,11 @@
         "101003":"invalid_token",
         "101004":"disrevoke_token",
         
-        "102000":"unkown_user"
+        "102000":"unkown_user",
+        
+        "200000":"mongo_error",
+        "200001":"memcache_error",
+        "200002":"redis_error"
     },
     "error-codes": {
         INTERAL_ERROR:100000,
@@ -27,7 +31,11 @@
         INVALID_TOKEN:101003,
         DISREVOKE_TOKEN:101004,
         
-        UNKOWN_USER:102000
+        UNKOWN_USER:102000,
+        
+        MONGO_ERROR:200000,
+        MEMCACHE_ERROR:200001,
+        REDIS_ERROR:200002
     },
     "error-messages": {
         INTERAL_ERROR:"interal_error",
@@ -42,6 +50,10 @@
         INVALID_TOKEN:"invalid_token",
         DISREVOKE_TOKEN:"disrevoke_token",
         
-        UNKOWN_USER:"unkown_user"
+        UNKOWN_USER:"unkown_user",
+        
+        MONGO_ERROR:"mongo_error",
+        MEMCACHE_ERROR:"memcache_error",
+        REDIS_ERROR:"redis_error"
     }
 }

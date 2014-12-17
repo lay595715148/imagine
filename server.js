@@ -32,19 +32,19 @@ app.use($.cookie_session({ secret:'imagine-test', cookie: { maxAge: 60 * 60 * 10
 app.use(function(req, res, next) {
     var _path = $.url.parse(req.url,true).pathname.substr(1);
     if(_path === 'test') {
-        $.Log.info('------------ TEST ------------');
+        $.Log.info('\033[31m------------ TST  ------------\033[39m');
         $.App.test(req, res, api_url, function() {
-            $.Log.info('------------ TEST*------------');
+            $.Log.info('------------ TST* ------------');
         });
     } else if(_path === ''){
-        $.Log.info('------------ API  ------------');
+        $.Log.info('\033[33m------------ JSN  ------------\033[39m');
         $.App.json(req, res, function() {
-            $.Log.info('------------ API* ------------');
+            $.Log.info('------------ JSN* ------------');
         });
     } else {
-        $.Log.info('------------ WEB  ------------');
+        $.Log.info('\033[36m------------ API  ------------\033[39m');
         $.App.api(req, res, function() {
-            $.Log.info('------------ WEB* ------------');
+            $.Log.info('------------ API* ------------');
         });
     }
 });
