@@ -16,7 +16,8 @@
         
         "200000":"mongo_error",
         "200001":"memcache_error",
-        "200002":"redis_error"
+        "200002":"redis_error",
+        "200003":"solr_error"
     },
     "error-codes": {
         INTERAL_ERROR:100000,
@@ -35,7 +36,8 @@
         
         MONGO_ERROR:200000,
         MEMCACHE_ERROR:200001,
-        REDIS_ERROR:200002
+        REDIS_ERROR:200002,
+        SOLR_ERROR:200003
     },
     "error-messages": {
         INTERAL_ERROR:"interal_error",
@@ -54,6 +56,7 @@
         
         MONGO_ERROR:"mongo_error",
         MEMCACHE_ERROR:"memcache_error",
-        REDIS_ERROR:"redis_error"
+        REDIS_ERROR:"redis_error",
+        SOLR_ERROR:"solr_error"
     }
 }
