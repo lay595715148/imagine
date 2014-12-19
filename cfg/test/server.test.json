@@ -2,7 +2,7 @@
     "servers":{
         "mongodb":{
             "master":{
-                "host":"localhost",
+                "host":"mongodb.laysoft.cn",
                 "database":"laysoft",
                 "port":27017,
                 "username":"lay",
@@ -20,7 +20,7 @@
         },
         "memcache":{
             "master":{
-                "host":"localhost",
+                "host":"memcache.laysoft.cn",
                 "port":11211
             },
             slaves:[{
@@ -41,7 +41,7 @@
         },
         "redis":{
             "master":{
-                "host":"127.0.0.1",
+                "host":"redis.laysoft.cn",
                 "port":6379
             },
             "slave":{
@@ -55,16 +55,30 @@
         },
         "solr":{
             "master":{
-                "host":"192.168.159.185",
+                "host":"solr.laysoft.cn",
                 "port":8080
             },
             "slave":{
                 "host":"127.0.0.1",
-                "port":6379
+                "port":8080
             },
             "slave-01":{
                 "host":"127.0.0.1",
-                "port":6379
+                "port":8080
+            }
+        },
+        "rabbitmq":{
+            "master":{
+                "host":"rabbitmq.laysoft.cn",
+                "port":5672
+            },
+            "slave":{
+                "host":"127.0.0.1",
+                "port":5672
+            },
+            "slave-01":{
+                "host":"127.0.0.1",
+                "port":5672
             }
         }
     }

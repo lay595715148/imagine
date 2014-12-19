@@ -1,13 +1,14 @@
+var host = 'localhost', host_api = 'localhost';
 var port = 8133, port_api = 8808;
-var api_url = 'http://localhost:' + port_api + '/';
+var api_url = 'http://' + host_api + ':' + port_api + '/';
 var $ = global.$ = global.$ || require('./lib/util/Require');
 var _ = global._ = global._ || {};//备用
 
 //初始化定义模块或类访问空间
 $.define($, ['assert', 'async', 'bower', 'body-parser', 'cookie-parser', 'cookie-session', 'crypto',
         'express', 'fn.js', 'geddy', 'helmet', 'jade', 'lru-cache', 'http', 'memcache', 'method-override',
-        'mime', 'moment', 'mongodb', 'mysql', 'node-uuid', 'path', 'php-express', 'redis', 'request',
-        'scribe', 'solr-client', 'syslog', 'underscore', 'url', 'util']);
+        'mime', 'moment', 'mongodb', 'mysql', 'node-uuid', 'path', 'php-express', 'rabbitmq-nodejs-client',
+        'redis', 'request', 'scribe', 'solr-client', 'syslog', 'underscore', 'url', 'util']);
 $.define($, [__dirname + '/lib']);
 
 var cfg = $.core.Config;
