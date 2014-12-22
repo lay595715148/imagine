@@ -1,23 +1,23 @@
 {
     "errors":{
-        "100000":"interal_error",
-        "100001":"invalid_json",
-        "100002":"invalid_cmd",
-        "100003":"unsupported_cmd",
-        "100004":"no_output",
+        INTERAL_ERROR:[100000, "interal_error"],
+        INVALID_JSON:[100001, "invalid_json"],
+        INVALID_CMD:[100002, "invalid_cmd"],
+        UNSUPPORTED_CMD:[100003, "unsupported_cmd"],
+        NO_OUTPUT:[100004, "no_output"],
         
-        "101000":"invalid_request",
-        "101001":"invalid_client",
-        "101002":"invalid_grant",
-        "101003":"invalid_token",
-        "101004":"disrevoke_token",
+        INVALID_REQUEST:[101000, "invalid_request"],
+        INVALID_CLIENT:[101001, "invalid_client"],
+        INVALID_GRANT:[101002, "invalid_grant"],
+        INVALID_TOKEN:[101003, "invalid_token"],
+        DISREVOKE_TOKEN:[101004, "disrevoke_token"],
         
-        "102000":"unkown_user",
+        UNKOWN_USER:[102000, "unkown_user"],
         
-        "200000":"mongo_error",
-        "200001":"memcache_error",
-        "200002":"redis_error",
-        "200003":"solr_error"
+        MONGO_ERROR:[200000, "mongo_error"],
+        MEMCACHE_ERROR:[200001, "memcache_error"],
+        REDIS_ERROR:[200002, "redis_error"],
+        SOLR_ERROR:[200003, "solr_error"]
     },
     "error-codes": {
         INTERAL_ERROR:100000,
