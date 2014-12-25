@@ -17,7 +17,9 @@
         MONGO_ERROR:[200000, "mongo_error"],
         MEMCACHE_ERROR:[200001, "memcache_error"],
         REDIS_ERROR:[200002, "redis_error"],
-        SOLR_ERROR:[200003, "solr_error"]
+        SOLR_ERROR:[200003, "solr_error"],
+
+        UNKOWN_ERROR:[999999, "unkown_error"]
     },
     "error-codes": {
         INTERAL_ERROR:100000,
