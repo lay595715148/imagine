@@ -22,7 +22,7 @@ $.define($, ['amqp', 'assert', 'async',
              'querystring',
              'rabbitmq-nodejs-client', 'redis', 'request', 'scribe',
              'socket.io', 'solr-client', 'syslog',
-             'underscore', 'url', 'util']);
+             'underscore', 'url']);
 $.define($, [__dirname + '/lib']);
 
 var cgi = new $.server.Cgi(port);
