@@ -8,7 +8,7 @@ var _ = global._ = global._ || {};//备用
 //初始化定义模块或类访问空间
 $.define($, ['amqp', 'assert', 'async',
              'bower', 'body-parser',
-             'console-highlight', 'cookie-parser', 'cookie-session', 'crypto',
+             'colors', 'console-highlight', 'cookie-parser', 'cookie-session', 'crypto',
              'express',
              'fn.js',
              'geddy', 'grunt',
@@ -25,7 +25,7 @@ $.define($, ['amqp', 'assert', 'async',
              'underscore', 'url']);
 $.define($, [__dirname + '/lib']);
 
-var cli = new $.server.Cli(port);
+var cli = new $.server.Cli();
 cli.set('api_port', api_port);
 //cli.init();
 cli.open();

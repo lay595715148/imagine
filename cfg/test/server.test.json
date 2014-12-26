@@ -23,7 +23,7 @@
                 "host":"memcache.laysoft.cn",
                 "port":11211
             },
-            slaves:[{
+            "slaves":[{
                 "host":"localhost",
                 "port":11211
             }, {
@@ -65,6 +65,23 @@
             "slave-01":{
                 "host":"127.0.0.1",
                 "port":8080
+            }
+        },
+        "scribe":{
+            "master":{
+                "logger":"console",
+                "host":"scribe.laysoft.cn",
+                "port":1463
+            },
+            "slave":{
+                "logger":"console",
+                "host":"127.0.0.1",
+                "port":1463
+            },
+            "slave-01":{
+                "logger":"console",
+                "host":"127.0.0.1",
+                "port":1463
             }
         },
         "rabbitmq":{
