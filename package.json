@@ -1,0 +1,26 @@
+{
+  "name": "imagine",
+  "version": "0.0.1",
+  "description": "imagine",
+  "keywords": [
+    "imagine"
+  ],
+  "author": "Lay Li",
+  "main": "index.js",
+  "dependencies": {
+    "minify": "^1.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lay595715148/imagine.git"
+  },
+  "devDependencies": {
+    "express": "~4.0.0",
+    "htmlout": "~0.1.2",
+    "syslog": "~0.1.1",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0"
+  }
+}
