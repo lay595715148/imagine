@@ -23,3 +23,7 @@ Dependences
 14. cookie-session
 15. method-override
 
+Donations
+=======
+
+If you are interested in this, if you'd like to donate, thank you very much.
